@@ -15,7 +15,6 @@
   },
   "dependencies": {
     "@ceol/tailwind-tooltip": "^0.1.4",
-    "@heartsciencesecgcloud/insights-ui-kit": "^0.0.1",
     "@hookform/resolvers": "^3.6.0",
     "@julr/vite-plugin-validate-env": "^1.1.1",
     "@tanstack/react-query": "^5.40.0",
@@ -34,6 +33,7 @@
     "react-dom": "^18.2.0",
     "react-dropzone": "^14.2.3",
     "react-hook-form": "^7.51.5",
+    "react-multi-carousel": "^2.8.5",
     "react-router-dom": "^6.24.0",
     "tailwind-datepicker-react": "^1.4.3",
     "vite-plugin-svgr": "^4.2.0",
