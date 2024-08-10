@@ -3,7 +3,9 @@ export interface Product {
   name: string;
   image: any; // TODO should be defined
   price: number;
+  description: string;
   inventory: number;
+  rating: number;
 }
 
 export interface Collection {
