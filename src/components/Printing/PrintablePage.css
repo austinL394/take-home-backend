@@ -1,0 +1,35 @@
+.letter-portrait,
+.letter-landscape,
+.a4-portrait,
+.a4-landscape {
+  -webkit-print-color-adjust: exact !important;
+  print-color-adjust: exact !important;
+  overflow: hidden;
+  page-break-before: always;
+  page-break-inside: avoid;
+  page-break-after: always;
+}
+
+.letter-portrait {
+  width: 8.5in;
+  height: 11in;
+  page: letter-portrait;
+}
+
+.letter-landscape {
+  width: 11in;
+  height: 8.5in;
+  page: letter-landscape;
+}
+
+.a4-portrait {
+  width: 21cm;
+  height: 29.7cm;
+  page: a4-portrait;
+}
+
+.a4-landscape {
+  width: 29.7cm;
+  height: 21cm;
+  page: a4-landscape;
+}
