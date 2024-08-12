@@ -1,0 +1,221 @@
+[
+  {
+    "name": "main.ts",
+    "path": "src/main.ts",
+    "content": {
+      "structured": {
+        "description": "An Express.js application that provides API endpoints for managing collections and products, as well as uploading files using multer middleware. The code initializes two arrays of collection and product objects, which are then used to generate JSON responses for GET requests. The API includes endpoints for retrieving all collections, specific collections by ID, carousels, all products, a single product by ID, and file uploads.",
+        "items": [
+          {
+            "id": "7cb4d86a-2cf6-8886-4f45-56d2cdaf7fb3",
+            "ancestors": [],
+            "description": "Returns a GET request handler for \"/\".",
+            "name": null,
+            "location": {
+              "start": 92,
+              "insert": 93,
+              "offset": " ",
+              "indent": 2,
+              "comment": null
+            },
+            "item_type": "higher_order_invocation",
+            "length": 3,
+            "docLength": null
+          },
+          {
+            "id": "aba2b1a2-ed0e-9c81-ff46-7d62bc524e92",
+            "ancestors": [],
+            "description": "Initializes a server on port 3000 and logs its status.",
+            "name": null,
+            "location": {
+              "start": 96,
+              "insert": 97,
+              "offset": " ",
+              "indent": 2,
+              "comment": null
+            },
+            "item_type": "higher_order_invocation",
+            "length": 3,
+            "docLength": null
+          },
+          {
+            "id": "c118c955-1f39-0eac-9e45-853eb7f4efbb",
+            "ancestors": [],
+            "description": "Retrieves and formats data for API endpoint \"/collections\".",
+            "name": null,
+            "location": {
+              "start": 100,
+              "insert": 101,
+              "offset": " ",
+              "indent": 2,
+              "comment": null
+            },
+            "item_type": "higher_order_invocation",
+            "length": 10,
+            "docLength": null
+          },
+          {
+            "id": "d093e507-42b1-4b98-d44a-e4bb92061465",
+            "ancestors": [],
+            "description": "Handles GET requests to \"/getPureCollections\".",
+            "name": null,
+            "location": {
+              "start": 112,
+              "insert": 113,
+              "offset": " ",
+              "indent": 2,
+              "comment": null
+            },
+            "item_type": "higher_order_invocation",
+            "length": 9,
+            "docLength": null
+          },
+          {
+            "id": "19e2cab9-47b1-689b-814f-ea190fd52a84",
+            "ancestors": [],
+            "description": "Returns all collections with their products.",
+            "name": null,
+            "location": {
+              "start": 122,
+              "insert": 123,
+              "offset": " ",
+              "indent": 2,
+              "comment": null
+            },
+            "item_type": "higher_order_invocation",
+            "length": 14,
+            "docLength": null
+          },
+          {
+            "id": "29e0223d-9222-3b97-094c-77828fcae31c",
+            "ancestors": [],
+            "description": "Updates collections.",
+            "name": null,
+            "location": {
+              "start": 137,
+              "insert": 138,
+              "offset": " ",
+              "indent": 2,
+              "comment": null
+            },
+            "item_type": "higher_order_invocation",
+            "length": 9,
+            "docLength": null
+          },
+          {
+            "id": "d498bd1e-ed67-7e8e-d545-3badf750d090",
+            "ancestors": [],
+            "description": "Retrieves and responds with a specific collection details.",
+            "name": null,
+            "location": {
+              "start": 147,
+              "insert": 148,
+              "offset": " ",
+              "indent": 2,
+              "comment": null
+            },
+            "item_type": "higher_order_invocation",
+            "length": 17,
+            "docLength": null
+          },
+          {
+            "id": "926d24ed-cff8-3189-224d-62de13dedc7c",
+            "ancestors": [],
+            "description": "Returns a list of carousels on GET request to \"/carousels\".",
+            "name": null,
+            "location": {
+              "start": 166,
+              "insert": 167,
+              "offset": " ",
+              "indent": 2,
+              "comment": null
+            },
+            "item_type": "higher_order_invocation",
+            "length": 7,
+            "docLength": null
+          },
+          {
+            "id": "dba88dab-520e-9eb1-f943-5dd7321abca9",
+            "ancestors": [],
+            "description": "Handles PUT requests to \"/carousels\".",
+            "name": null,
+            "location": {
+              "start": 174,
+              "insert": 175,
+              "offset": " ",
+              "indent": 2,
+              "comment": null
+            },
+            "item_type": "higher_order_invocation",
+            "length": 9,
+            "docLength": null
+          },
+          {
+            "id": "24915802-7fc3-03b2-2247-9cc4666d0cb1",
+            "ancestors": [],
+            "description": "Handles GET requests for \"/products\".",
+            "name": null,
+            "location": {
+              "start": 185,
+              "insert": 186,
+              "offset": " ",
+              "indent": 2,
+              "comment": null
+            },
+            "item_type": "higher_order_invocation",
+            "length": 7,
+            "docLength": null
+          },
+          {
+            "id": "0a4e13f5-8048-66ab-184b-c9e803400877",
+            "ancestors": [],
+            "description": "Updates products.",
+            "name": null,
+            "location": {
+              "start": 193,
+              "insert": 194,
+              "offset": " ",
+              "indent": 2,
+              "comment": null
+            },
+            "item_type": "higher_order_invocation",
+            "length": 9,
+            "docLength": null
+          },
+          {
+            "id": "2a3074fd-a6d7-e59e-8c40-bf6f2a0ec252",
+            "ancestors": [],
+            "description": "Retrieves and returns a product by ID.",
+            "name": null,
+            "location": {
+              "start": 203,
+              "insert": 204,
+              "offset": " ",
+              "indent": 2,
+              "comment": null
+            },
+            "item_type": "higher_order_invocation",
+            "length": 8,
+            "docLength": null
+          },
+          {
+            "id": "afb79376-a485-0eb3-1c46-0de75d2caa60",
+            "ancestors": [],
+            "description": "Handles file uploads.",
+            "name": null,
+            "location": {
+              "start": 212,
+              "insert": 213,
+              "offset": " ",
+              "indent": 2,
+              "comment": null
+            },
+            "item_type": "higher_order_invocation",
+            "length": 9,
+            "docLength": null
+          }
+        ]
+      }
+    }
+  }
+]
