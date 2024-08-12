@@ -16,14 +16,16 @@ let collections: Collection[] = [
     id: "1",
     name: "Collection 1",
     description: "Description 1",
-    image: "https://via.placeholder.com/150",
+    image:
+      "https://www.kermanig.com/cdn/shop/collections/template-baklava.jpg?v=1668195791&width=165",
     products: ["1", "2"],
   },
   {
     id: "2",
     name: "Collection 2",
     description: "Description 2",
-    image: "https://via.placeholder.com/150",
+    image:
+      "https://www.kermanig.com/cdn/shop/collections/template-baklava.jpg?v=1668195791&width=165",
     products: ["3", "4"],
   },
 ];
