@@ -2,8 +2,6 @@ import express from "express";
 import { Collection, Product } from "./main.types";
 const multer = require("multer");
 
-const PORT = 3000;
-
 var upload = multer({
   dest: "uploads/",
   preservePath: true,
@@ -93,8 +91,8 @@ app.get("/", (_, res) => {
   res.send("Hello, World!");
 });
 
-app.listen(PORT, () => {
-  console.log(`Server is running at http://localhost:${PORT}`);
+app.listen(3000, () => {
+  console.log(`Server is running at http://localhost:3000`);
 });
 
 app.get("/collections", (_, res) => {
@@ -108,27 +106,40 @@ app.get("/collections", (_, res) => {
   });
 });
 
+// Retrieve all collections without populating products
 app.get("/getPureCollections", (_, res) => {
-  res.json({
-    result: collections,
-  });
+  try {
+    res.json({
+      result: collections,
+    });
+  } catch (error) {
+    res.status(500).json({ error: "Internal server error" });
+  }
 });
 
 app.get("/collections", (_, res) => {
-  res.json({
-    result: collections.map((collection) => ({
-      ...collection,
-      products: collection.products.map((productId) =>
-        products.find((product) => product.id == productId)
-      ),
-    })),
-  });
+  try {
+    res.json({
+      result: collections.map((collection) => ({
+        ...collection,
+        products: collection.products.map((productId) =>
+          products.find((product) => product.id == productId)
+        ),
+      })),
+    });
+  } catch (error) {
+    res.status(500).json({ error: "Internal server error" });
+  }
 });
 
 app.put("/collections", (req, res) => {
   const { payload } = req.body;
-  collections = JSON.parse(payload);
-  res.send("Collections updated");
+  try {
+    collections = JSON.parse(payload);
+    res.send("Collections updated");
+  } catch (error) {
+    res.status(400).json({ error: "Invalid payload" });
+  }
 });
 
 app.get("/collections/:id", (req, res) => {
@@ -149,26 +160,42 @@ app.get("/collections/:id", (req, res) => {
   });
 });
 
+// Retrieve all carousels
 app.get("/carousels", (_, res) => {
-  console.log("@  get carousels", { carousels });
-  res.json({ result: carousels });
+  try {
+    res.json({ result: carousels });
+  } catch (error) {
+    res.status(500).json({ error: "Internal server error" });
+  }
 });
 
 app.put("/carousels", (req, res) => {
   const { payload } = req.body;
-  carousels = JSON.parse(payload);
-  console.log("@new carousels", { carousels });
-  res.send("Carousels updated");
+  try {
+    carousels = JSON.parse(payload);
+    res.send("Carousels updated");
+  } catch (error) {
+    res.status(400).json({ error: "Invalid payload" });
+  }
 });
 
+// Retrieve all products
 app.get("/products", (req, res) => {
-  res.json({ result: products });
+  try {
+    res.json({ result: products });
+  } catch (error) {
+    res.status(500).json({ error: "Internal server error" });
+  }
 });
 
 app.put("/products", (req, res) => {
   const { payload } = req.body;
-  products = JSON.parse(payload)[0];
-  res.send("Products updated");
+  try {
+    products = JSON.parse(payload)[0];
+    res.send("Products updated");
+  } catch (error) {
+    res.status(400).json({ error: "Invalid payload" });
+  }
 });
 
 app.get("/products/:id", (req, res) => {
