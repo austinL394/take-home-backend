@@ -1,5 +1,4 @@
-// external dependencies
-import express, { Request, Response } from "express";
+import express from "express";
 import { Collection, Product } from "./main.types";
 const multer = require("multer");
 
@@ -182,7 +181,6 @@ app.get("/products/:id", (req, res) => {
 });
 
 app.post("/upload", upload.single("file"), (req, res) => {
-  console.log("@ inside upload/ api");
   if (!req.file) {
     return res.status(400).json({ error: "No file uploaded" });
   }
