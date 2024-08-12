@@ -90,14 +90,20 @@ let carousels = [
 ];
 
 app.get("/", (_, res) => {
+  // Returns a GET request handler for "/".
+
   res.send("Hello, World!");
 });
 
 app.listen(3000, () => {
+  // Initializes a server on port 3000 and logs its status.
+
   console.log(`Server is running at http://localhost:3000`);
 });
 
 app.get("/collections", (_, res) => {
+  // Retrieves and formats data for API endpoint "/collections".
+
   res.json({
     result: collections.map((collection) => ({
       ...collection,
@@ -110,6 +116,8 @@ app.get("/collections", (_, res) => {
 
 // Retrieve all collections without populating products
 app.get("/getPureCollections", (_, res) => {
+  // Handles GET requests to "/getPureCollections".
+
   try {
     res.json({
       result: collections,
@@ -120,6 +128,8 @@ app.get("/getPureCollections", (_, res) => {
 });
 
 app.get("/collections", (_, res) => {
+  // Returns all collections with their products.
+
   try {
     res.json({
       result: collections.map((collection) => ({
@@ -135,6 +145,8 @@ app.get("/collections", (_, res) => {
 });
 
 app.put("/collections", (req, res) => {
+  // Updates collections.
+
   const { payload } = req.body;
   try {
     collections = JSON.parse(payload);
@@ -145,6 +157,8 @@ app.put("/collections", (req, res) => {
 });
 
 app.get("/collections/:id", (req, res) => {
+  // Retrieves and responds with a specific collection details.
+
   const collection = collections.find(
     (collection) => collection.id == req.params.id
   );
@@ -164,6 +178,8 @@ app.get("/collections/:id", (req, res) => {
 
 // Retrieve all carousels
 app.get("/carousels", (_, res) => {
+  // Returns a list of carousels on GET request to "/carousels".
+
   try {
     res.json({ result: carousels });
   } catch (error) {
@@ -172,6 +188,8 @@ app.get("/carousels", (_, res) => {
 });
 
 app.put("/carousels", (req, res) => {
+  // Handles PUT requests to "/carousels".
+
   const { payload } = req.body;
   try {
     carousels = JSON.parse(payload);
@@ -183,6 +201,8 @@ app.put("/carousels", (req, res) => {
 
 // Retrieve all products
 app.get("/products", (req, res) => {
+  // Handles GET requests for "/products".
+
   try {
     res.json({ result: products });
   } catch (error) {
@@ -191,6 +211,8 @@ app.get("/products", (req, res) => {
 });
 
 app.put("/products", (req, res) => {
+  // Updates products.
+
   const { payload } = req.body;
   try {
     products = JSON.parse(payload)[0];
@@ -201,6 +223,8 @@ app.put("/products", (req, res) => {
 });
 
 app.get("/products/:id", (req, res) => {
+  // Retrieves and returns a product by ID.
+
   const product = products.find((product) => product.id == req.params.id);
   if (!product) {
     res.status(404).json({ error: "Product not found" });
@@ -210,6 +234,8 @@ app.get("/products/:id", (req, res) => {
 });
 
 app.post("/upload", upload.single("file"), (req, res) => {
+  // Handles file uploads.
+
   if (!req.file) {
     return res.status(400).json({ error: "No file uploaded" });
   }
