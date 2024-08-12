@@ -57,13 +57,19 @@ const collections: Collection[] = [
 ];
 
 app.get("/", (_, res) => {
+  // Handles GET requests at root URL and sends response "Hello, World!".
+
   res.send("Hello, World!");
 });
 
 app.listen(PORT, () => {
+  // Starts the server on PORT and logs its status to the console.
+
   console.log(`Server is running at http://localhost:${PORT}`);
 });
 
 app.get("/collections", (_, res) => {
+  // Serves JSON response.
+
   res.json({ result: collections });
 });

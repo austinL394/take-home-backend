@@ -1,0 +1,16 @@
+{
+  "meta": {
+    "version": "1",
+    "updated_at": "2024-08-12T02:18:46.352Z",
+    "created_at": "2024-08-12T02:18:48.403Z",
+    "pipelines": [
+      "4516941a-d38a-4295-ae04-808addc93e96"
+    ]
+  },
+  "lookup": [
+    [
+      "src/main.ts",
+      "src/main.types.ts"
+    ]
+  ]
+}
