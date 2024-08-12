@@ -1,9 +1,11 @@
 export interface Product {
   id: string;
   name: string;
-  image: any; // TODO should be defined
+  images: string[];
   price: number;
+  description: string;
   inventory: number;
+  rating: number;
 }
 
 export interface Collection {
@@ -11,5 +13,5 @@ export interface Collection {
   name: string;
   description: string;
   image: string;
-  products: Array<Product>;
+  products: Array<string>;
 }
