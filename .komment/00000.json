@@ -1,0 +1,104 @@
+[
+  {
+    "name": "main.ts",
+    "path": "src/main.ts",
+    "content": {
+      "structured": {
+        "description": "An Express.js application that sets up a RESTful API for managing collections and products. The code imports required dependencies including express, json, and urlencoded. It initializes an Express app with json and urlencoded middleware and defines two routes: one for handling root requests and another for returning a list of collections.",
+        "items": [
+          {
+            "id": "a0e0de9d-debf-7eb7-5545-5342ed6d34f4",
+            "ancestors": [],
+            "description": "Handles GET requests at root URL and sends response \"Hello, World!\".",
+            "name": null,
+            "location": {
+              "start": 59,
+              "insert": 60,
+              "offset": " ",
+              "indent": 2,
+              "comment": null
+            },
+            "item_type": "higher_order_invocation",
+            "length": 3,
+            "docLength": null
+          },
+          {
+            "id": "360060b3-6b10-f7b3-5c4f-7ccd5e260d1e",
+            "ancestors": [],
+            "description": "Starts the server on PORT and logs its status to the console.",
+            "name": null,
+            "location": {
+              "start": 63,
+              "insert": 64,
+              "offset": " ",
+              "indent": 2,
+              "comment": null
+            },
+            "item_type": "higher_order_invocation",
+            "length": 3,
+            "docLength": null
+          },
+          {
+            "id": "e781c8ca-30cb-5cb1-3443-c017c82cb987",
+            "ancestors": [],
+            "description": "Serves JSON response.",
+            "name": null,
+            "location": {
+              "start": 67,
+              "insert": 68,
+              "offset": " ",
+              "indent": 2,
+              "comment": null
+            },
+            "item_type": "higher_order_invocation",
+            "length": 3,
+            "docLength": null
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "main.types.ts",
+    "path": "src/main.types.ts",
+    "content": {
+      "structured": {
+        "description": "Two interfaces: `Product` and `Collection`. The `Product` interface describes a product with properties for its ID, name, image, price, and inventory level. The `Collection` interface represents a collection of products, defining its own ID, name, description, image, and an array of `Product` objects.",
+        "items": [
+          {
+            "id": "e4184d41-8fdf-7993-724d-7f5852a31141",
+            "ancestors": [],
+            "description": "Defines a contract for an object that has the following properties:\n\n* `id`: a string value\n* `name`: a string value\n* `image`: any type of value (a TODO comment suggests that this should be replaced with a more specific definition)\n* `price`: a number value\n* `inventory`: a number value",
+            "name": "Product",
+            "location": {
+              "start": 1,
+              "insert": 1,
+              "offset": " ",
+              "indent": 0,
+              "comment": null
+            },
+            "item_type": "interface",
+            "length": 7,
+            "docLength": null
+          },
+          {
+            "id": "88c9d923-81a9-3ba1-9c4d-90e2c4fabf9f",
+            "ancestors": [],
+            "description": "Defines a type for an object with five properties. The properties include:\n\n* `id`: A string representing a unique identifier.\n* `name`: A string representing the name of the collection.\n* `description`: A string representing a brief description of the collection.\n* `image`: A string representing the URL or path to an image associated with the collection.\n* `products`: An array of `Product` objects, which is expected to be implemented separately.",
+            "name": "Collection",
+            "location": {
+              "start": 9,
+              "insert": 9,
+              "offset": " ",
+              "indent": 0,
+              "comment": null
+            },
+            "item_type": "interface",
+            "length": 7,
+            "docLength": null
+          }
+        ]
+      }
+    }
+  }
+]
